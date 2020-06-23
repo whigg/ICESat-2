@@ -121,10 +121,10 @@ for i in range(len(df_inputs.location)):
     print('It took:')
     print("%d hours, %d minutes, %d.%d seconds" %(dt_hour,dt_min,dt_sec,dt.microseconds%1000000))
 
-    lon_NDWI_masked = lon[landmask==False]
-    lat_NDWI_masked = lat[landmask==False]
-    height_NDWI_masked = height[landmask==False]
-    time_NDWI_masked = time[landmask==False]
+    lon_NDWI_masked = lon[landmask==True]
+    lat_NDWI_masked = lat[landmask==True]
+    height_NDWI_masked = height[landmask==True]
+    time_NDWI_masked = time[landmask==True]
 
     f1 = open(atl03_out,'w')
     f1a = open(atl03_time_out,'w')
